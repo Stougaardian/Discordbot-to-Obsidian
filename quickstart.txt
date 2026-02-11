@@ -1,0 +1,11 @@
+﻿cd C:\Users\iwo\Documents\projects\Dory\discord
+
+# Activate venv
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+.\.venv\Scripts\Activate.ps1
+
+# Terminal 1: start backend
+uvicorn app:app --reload
+
+# Terminal 2: start Discord bot
+python discord_bot.py
